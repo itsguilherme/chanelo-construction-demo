@@ -9,6 +9,16 @@
       es: "Chanelo Construction se encarga de <strong>estuco, concreto, yeso y pintura</strong> en casas de los condados de Pasco, Hillsborough y Pinellas. Llama o envía un mensaje de texto para una cotización gratis."
     },
     cta_call: { en: "Call or Text (813) 735-8293", es: "Llama o Envía Texto al (813) 735-8293" },
+    nav_about: { en: "About", es: "Sobre Nosotros" },
+    nav_services: { en: "Services", es: "Servicios" },
+    nav_projects: { en: "Our Projects", es: "Nuestros Proyectos" },
+    nav_contact: { en: "Contact", es: "Contacto" },
+    about_eyebrow: { en: "WHO WE ARE", es: "QUIÉNES SOMOS" },
+    about_heading: { en: "A Local, Family-Run Crew", es: "Un Equipo Familiar y Local" },
+    about_body: {
+      en: "Chanelo Construction is a family-run crew based in Gibsonton, Florida, led by <strong>Alberto and Daniel Chanelo</strong>. The team handles stucco, concrete, plaster, and painting for homes across Pasco, Hillsborough, and Pinellas counties, from small repairs to full new construction. Every job starts with an in-person visit and a real conversation about what the space needs.",
+      es: "Chanelo Construction es un equipo familiar con base en Gibsonton, Florida, dirigido por <strong>Alberto y Daniel Chanelo</strong>. El equipo se encarga de estuco, concreto, yeso y pintura en casas de los condados de Pasco, Hillsborough y Pinellas, desde pequeñas reparaciones hasta construcción nueva completa. Cada trabajo comienza con una visita en persona y una conversación real sobre lo que el espacio necesita."
+    },
     placeholder_hero: { en: "Real project photo goes here", es: "Foto real del proyecto va aquí" },
     work_eyebrow: { en: "REAL PROJECTS", es: "PROYECTOS REALES" },
     work_heading: { en: "Our Work Speaks for Itself", es: "Nuestro Trabajo Habla Por Sí Solo" },
@@ -18,13 +28,25 @@
     services_eyebrow: { en: "WHAT WE DO", es: "LO QUE HACEMOS" },
     services_heading: { en: "Our Services", es: "Nuestros Servicios" },
     service_1_title: { en: "Stucco", es: "Estuco" },
-    service_1_desc: { en: "Stucco repair, patching, and full installation for homes and additions.", es: "Reparación de estuco, parcheo e instalación completa para casas y adiciones." },
+    service_1_desc: {
+      en: "Stucco repair, patching, and <strong>full installation</strong> for homes and additions.",
+      es: "Reparación de estuco, parcheo e <strong>instalación completa</strong> para casas y adiciones."
+    },
     service_2_title: { en: "Concrete", es: "Concreto" },
-    service_2_desc: { en: "Driveways, walkways, slabs, and patios, poured and finished right.", es: "Entradas de auto, caminos, losas y patios, vaciados y terminados correctamente." },
+    service_2_desc: {
+      en: "Driveways, walkways, slabs, and patios, <strong>poured and finished right</strong>.",
+      es: "Entradas de auto, caminos, losas y patios, <strong>vaciados y terminados correctamente</strong>."
+    },
     service_3_title: { en: "Painting &amp; Plaster", es: "Pintura y Yeso" },
-    service_3_desc: { en: "Interior and exterior painting, plus plaster repair and finishing.", es: "Pintura interior y exterior, además de reparación y acabado de yeso." },
+    service_3_desc: {
+      en: "Interior and exterior painting, plus <strong>plaster repair and finishing</strong>.",
+      es: "Pintura interior y exterior, además de <strong>reparación y acabado de yeso</strong>."
+    },
     service_4_title: { en: "Repairs &amp; New Construction", es: "Reparaciones y Construcción Nueva" },
-    service_4_desc: { en: "From small home repairs to full new construction projects.", es: "Desde pequeñas reparaciones hasta proyectos completos de construcción nueva." },
+    service_4_desc: {
+      en: "From <strong>small repairs</strong> to <strong>full new construction</strong> projects.",
+      es: "Desde <strong>pequeñas reparaciones</strong> hasta <strong>construcción nueva</strong> completa."
+    },
     process_eyebrow: { en: "NO SURPRISES", es: "SIN SORPRESAS" },
     process_heading: { en: "What Happens When You Call", es: "Qué Pasa Cuando Llamas" },
     process_1: { en: "You call or text us.", es: "Nos llamas o envías un mensaje de texto." },
@@ -49,7 +71,29 @@
     final_heading: { en: "Ready to Get Started?", es: "¿Listo Para Empezar?" },
     final_sub: { en: "Call or text today for a free quote.", es: "Llama o envía un mensaje de texto hoy para una cotización gratis." },
     footer_area: { en: "Serving Pasco, Hillsborough, and Pinellas counties, Florida", es: "Sirviendo los condados de Pasco, Hillsborough y Pinellas, Florida" },
-    footer_copy: { en: "&copy; 2026 Chanelo Construction Company LLC", es: "&copy; 2026 Chanelo Construction Company LLC" }
+    footer_copy: { en: "&copy; 2026 Chanelo Construction Company LLC", es: "&copy; 2026 Chanelo Construction Company LLC" },
+
+    contact_eyebrow: { en: "GET IN TOUCH", es: "PONTE EN CONTACTO" },
+    contact_heading: { en: "Get a Free Quote", es: "Consigue una Cotización Gratis" },
+    contact_sub: { en: "Call, text, or send a message. We'll get back to you and set up a time to come look at the job.", es: "Llama, envía un mensaje de texto, o escríbenos. Te responderemos y programaremos una visita para ver el trabajo." },
+    contact_call_label: { en: "Call or Text", es: "Llamar o Texto" },
+    contact_area_label: { en: "Service Area", es: "Área de Servicio" },
+    contact_form_note: { en: "This form is a visual preview for the demo and is not connected yet.", es: "Este formulario es una vista previa del demo y todavía no está conectado." },
+    form_name: { en: "Name", es: "Nombre" },
+    form_phone: { en: "Phone", es: "Teléfono" },
+    form_email: { en: "Email", es: "Correo Electrónico" },
+    form_project_type: { en: "Project Type", es: "Tipo de Proyecto" },
+    form_select_placeholder: { en: "Select one", es: "Selecciona uno" },
+    form_message: { en: "Message", es: "Mensaje" },
+    form_submit: { en: "Send Message", es: "Enviar Mensaje" },
+
+    workpage_eyebrow: { en: "REAL PROJECTS", es: "PROYECTOS REALES" },
+    workpage_heading: { en: "Our Work", es: "Nuestro Trabajo" },
+    workpage_sub: { en: "A closer look at real jobs across Pasco, Hillsborough, and Pinellas counties.", es: "Una mirada más de cerca a trabajos reales en los condados de Pasco, Hillsborough y Pinellas." },
+    cat_stucco: { en: "Stucco", es: "Estuco" },
+    cat_concrete: { en: "Concrete", es: "Concreto" },
+    cat_painting: { en: "Painting &amp; Plaster", es: "Pintura y Yeso" },
+    cat_renovations: { en: "Full Renovations", es: "Renovaciones Completas" }
   };
 
   var STORAGE_KEY = "chanelo-lang";
@@ -82,6 +126,39 @@
     return "en";
   }
 
+  function initMobileNav() {
+    var hamburger = document.getElementById("hamburger-btn");
+    var nav = document.getElementById("main-nav");
+    var overlay = document.getElementById("nav-overlay");
+    var closeBtn = document.getElementById("nav-close");
+    if (!hamburger || !nav || !overlay) return;
+
+    function openNav() {
+      nav.classList.add("is-open");
+      overlay.classList.add("is-open");
+      hamburger.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-locked");
+    }
+    function closeNav() {
+      nav.classList.remove("is-open");
+      overlay.classList.remove("is-open");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-locked");
+    }
+    hamburger.addEventListener("click", function () {
+      var isOpen = nav.classList.contains("is-open");
+      if (isOpen) { closeNav(); } else { openNav(); }
+    });
+    overlay.addEventListener("click", closeNav);
+    if (closeBtn) closeBtn.addEventListener("click", closeNav);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeNav();
+    });
+    nav.querySelectorAll(".nav-link").forEach(function (link) {
+      link.addEventListener("click", closeNav);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var currentLang = getInitialLang();
     applyLang(currentLang);
@@ -91,6 +168,15 @@
       toggle.addEventListener("click", function () {
         currentLang = currentLang === "en" ? "es" : "en";
         applyLang(currentLang);
+      });
+    }
+
+    initMobileNav();
+
+    var contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
       });
     }
   });
