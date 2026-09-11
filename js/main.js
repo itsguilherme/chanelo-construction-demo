@@ -93,7 +93,17 @@
     cat_stucco: { en: "Stucco", es: "Estuco" },
     cat_concrete: { en: "Concrete", es: "Concreto" },
     cat_painting: { en: "Painting &amp; Plaster", es: "Pintura y Yeso" },
-    cat_renovations: { en: "Full Renovations", es: "Renovaciones Completas" }
+    cat_renovations: { en: "Full Renovations", es: "Renovaciones Completas" },
+
+    alt_hero_home: { en: "A finished home renovation by Chanelo Construction", es: "Una renovación de casa terminada por Chanelo Construction" },
+    alt_driveway_during: { en: "Chanelo Construction crew finishing a fresh concrete driveway", es: "El equipo de Chanelo Construction terminando una entrada de concreto recién vaciada" },
+    alt_stucco_patch: { en: "Fresh stucco patch repair on a home exterior", es: "Reparación reciente de estuco en el exterior de una casa" },
+    alt_patio: { en: "Covered patio addition with tile flooring", es: "Adición de patio cubierto con piso de losa" },
+    alt_entry: { en: "Renovated home entry with glass block and tile flooring", es: "Entrada de casa renovada con bloque de vidrio y piso de losa" },
+    alt_flagship_1: { en: "Stucco home under construction", es: "Casa con estuco en construcción" },
+    alt_flagship_2: { en: "Home construction site with framing in progress", es: "Sitio de construcción de casa con estructura en progreso" },
+    alt_driveway_after: { en: "Finished concrete driveway", es: "Entrada de concreto terminada" },
+    alt_window_install: { en: "New sliding glass door installation", es: "Instalación de nueva puerta corrediza de vidrio" }
   };
 
   var STORAGE_KEY = "chanelo-lang";
@@ -106,6 +116,14 @@
       var entry = translations[key];
       if (entry && entry[lang] !== undefined) {
         node.innerHTML = entry[lang];
+      }
+    });
+    var altNodes = document.querySelectorAll("[data-i18n-alt]");
+    altNodes.forEach(function (node) {
+      var key = node.getAttribute("data-i18n-alt");
+      var entry = translations[key];
+      if (entry && entry[lang] !== undefined) {
+        node.setAttribute("alt", entry[lang]);
       }
     });
     var toggle = document.getElementById("lang-toggle");
