@@ -9,6 +9,11 @@
       es: "Chanelo Construction se encarga de <strong>estuco, concreto, yeso y pintura</strong> en casas de los condados de Pasco, Hillsborough y Pinellas. Llama o envía un mensaje de texto para una cotización gratis."
     },
     cta_call: { en: "Call or Text (813) 735-8293", es: "Llama o Envía Texto al (813) 735-8293" },
+    cta_call_arrow: { en: "Call or Text (813) 735-8293 &rarr;", es: "Llama o Envía Texto al (813) 735-8293 &rarr;" },
+    cta_get_quote_arrow: { en: "Get a Free Quote &rarr;", es: "Cotización Gratis &rarr;" },
+    hero_chip_est: { en: "Est. 2022", es: "Fundada en 2022" },
+    hero_chip_area: { en: "Pasco &bull; Hillsborough &bull; Pinellas", es: "Pasco &bull; Hillsborough &bull; Pinellas" },
+    hero_chip_services: { en: "Stucco, Concrete &amp; Painting", es: "Estuco, Concreto y Pintura" },
     nav_about: { en: "About", es: "Sobre Nosotros" },
     nav_services: { en: "Services", es: "Servicios" },
     nav_projects: { en: "Our Projects", es: "Nuestros Proyectos" },
