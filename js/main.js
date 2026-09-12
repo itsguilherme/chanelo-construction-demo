@@ -78,7 +78,8 @@
     contact_sub: { en: "Call, text, or send a message. We'll get back to you and set up a time to come look at the job.", es: "Llama, envía un mensaje de texto, o escríbenos. Te responderemos y programaremos una visita para ver el trabajo." },
     contact_call_label: { en: "Call or Text", es: "Llamar o Texto" },
     contact_area_label: { en: "Service Area", es: "Área de Servicio" },
-    contact_form_note: { en: "This form is a visual preview for the demo and is not connected yet.", es: "Este formulario es una vista previa del demo y todavía no está conectado." },
+    form_confirm_heading: { en: "Thanks for reaching out!", es: "¡Gracias por contactarnos!" },
+    form_confirm_body: { en: "For the fastest response, call or text us directly.", es: "Para una respuesta más rápida, llámanos o envíanos un mensaje de texto directamente." },
     form_name: { en: "Name", es: "Nombre" },
     form_phone: { en: "Phone", es: "Teléfono" },
     form_email: { en: "Email", es: "Correo Electrónico" },
@@ -252,9 +253,12 @@
     initLightbox();
 
     var contactForm = document.getElementById("contact-form");
+    var formConfirmation = document.getElementById("form-confirmation");
     if (contactForm) {
       contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
+        contactForm.hidden = true;
+        if (formConfirmation) formConfirmation.hidden = false;
       });
     }
 
