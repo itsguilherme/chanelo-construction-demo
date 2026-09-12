@@ -106,7 +106,10 @@
     alt_window_install: { en: "New sliding glass door installation", es: "Instalación de nueva puerta corrediza de vidrio" },
 
     aria_whatsapp: { en: "Chat on WhatsApp", es: "Chatear por WhatsApp" },
-    aria_back_to_top: { en: "Back to top", es: "Volver arriba" }
+    aria_back_to_top: { en: "Back to top", es: "Volver arriba" },
+    aria_lightbox_close: { en: "Close", es: "Cerrar" },
+    aria_lightbox_prev: { en: "Previous photo", es: "Foto anterior" },
+    aria_lightbox_next: { en: "Next photo", es: "Foto siguiente" }
   };
 
   var STORAGE_KEY = "chanelo-lang";
@@ -188,6 +191,51 @@
     });
   }
 
+  function initLightbox() {
+    var lightbox = document.getElementById("lightbox");
+    if (!lightbox) return;
+    var imgEl = document.getElementById("lightbox-img");
+    var closeBtn = document.getElementById("lightbox-close");
+    var prevBtn = document.getElementById("lightbox-prev");
+    var nextBtn = document.getElementById("lightbox-next");
+    var tiles = Array.prototype.slice.call(document.querySelectorAll(".photo-tile img"));
+    if (tiles.length === 0) return;
+    var currentIndex = 0;
+
+    function show(index) {
+      currentIndex = (index + tiles.length) % tiles.length;
+      var img = tiles[currentIndex];
+      imgEl.src = img.currentSrc || img.src;
+      imgEl.alt = img.alt || "";
+    }
+    function open(index) {
+      show(index);
+      lightbox.hidden = false;
+      requestAnimationFrame(function () { lightbox.classList.add("is-open"); });
+      document.body.classList.add("nav-locked");
+    }
+    function close() {
+      lightbox.classList.remove("is-open");
+      document.body.classList.remove("nav-locked");
+      setTimeout(function () { lightbox.hidden = true; }, 250);
+    }
+    tiles.forEach(function (img, i) {
+      img.closest(".photo-tile").addEventListener("click", function () { open(i); });
+    });
+    closeBtn.addEventListener("click", close);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) close();
+    });
+    prevBtn.addEventListener("click", function () { show(currentIndex - 1); });
+    nextBtn.addEventListener("click", function () { show(currentIndex + 1); });
+    document.addEventListener("keydown", function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(currentIndex - 1);
+      if (e.key === "ArrowRight") show(currentIndex + 1);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var currentLang = getInitialLang();
     applyLang(currentLang);
@@ -201,6 +249,7 @@
     }
 
     initMobileNav();
+    initLightbox();
 
     var contactForm = document.getElementById("contact-form");
     if (contactForm) {

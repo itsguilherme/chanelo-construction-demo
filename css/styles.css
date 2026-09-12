@@ -38,6 +38,65 @@ h1,h2,h3{
   line-height:1.15;
 }
 
+/* Lightbox */
+.photo-tile{ cursor:pointer; }
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(10,12,14,0.92);
+  z-index:300;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 0.25s ease;
+}
+.lightbox.is-open{ opacity:1; visibility:visible; }
+.lightbox img{
+  max-width:88vw;
+  max-height:82vh;
+  object-fit:contain;
+  border-radius:6px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+.lightbox-close, .lightbox-nav{
+  position:fixed;
+  background:rgba(255,255,255,0.1);
+  color:var(--white);
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background 0.2s ease, transform 0.2s ease;
+}
+.lightbox-close:hover, .lightbox-nav:hover{ background:rgba(255,255,255,0.22); transform:scale(1.06); }
+.lightbox-close{
+  top:20px;
+  right:20px;
+  width:44px;
+  height:44px;
+  font-size:26px;
+  line-height:1;
+}
+.lightbox-nav{
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:48px;
+  font-size:16px;
+}
+.lightbox-nav:hover{ transform:translateY(-50%) scale(1.06); }
+.lightbox-prev{ left:16px; }
+.lightbox-next{ right:16px; }
+@media (max-width:640px){
+  .lightbox-nav{ width:38px; height:38px; }
+  .lightbox-prev{ left:6px; }
+  .lightbox-next{ right:6px; }
+}
+
 /* Floating action buttons */
 .whatsapp-fab, .back-to-top{
   position:fixed;
@@ -601,9 +660,21 @@ body.nav-locked{ overflow:hidden; }
 
 @media (min-width:900px){
   .cards-grid{ grid-template-columns:repeat(4,1fr); }
-  .hero h1{ max-width:16ch; }
   .contact-grid{ grid-template-columns:280px 1fr; align-items:start; }
   .photo-grid-3{ grid-template-columns:repeat(3,1fr); }
+
+  .hero{
+    background-image:linear-gradient(rgba(20,24,29,0.62), rgba(20,24,29,0.62)), url('../assets/photos/finished-home-mediterranean.jpg');
+    background-size:cover;
+    background-position:center;
+    min-height:560px;
+    display:flex;
+    align-items:center;
+  }
+  .hero-photo{ display:none; }
+  .hero h1{ max-width:16ch; color:var(--white); }
+  .hero-sub{ color:#dcd8d0; }
+  .hero-sub strong{ color:var(--white); }
 
   .hamburger, .nav-close, .nav-overlay{ display:none; }
   .desktop-only-cta{ display:inline-block; }
