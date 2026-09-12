@@ -103,7 +103,10 @@
     alt_flagship_1: { en: "Stucco home under construction", es: "Casa con estuco en construcción" },
     alt_flagship_2: { en: "Home construction site with framing in progress", es: "Sitio de construcción de casa con estructura en progreso" },
     alt_driveway_after: { en: "Finished concrete driveway", es: "Entrada de concreto terminada" },
-    alt_window_install: { en: "New sliding glass door installation", es: "Instalación de nueva puerta corrediza de vidrio" }
+    alt_window_install: { en: "New sliding glass door installation", es: "Instalación de nueva puerta corrediza de vidrio" },
+
+    aria_whatsapp: { en: "Chat on WhatsApp", es: "Chatear por WhatsApp" },
+    aria_back_to_top: { en: "Back to top", es: "Volver arriba" }
   };
 
   var STORAGE_KEY = "chanelo-lang";
@@ -124,6 +127,14 @@
       var entry = translations[key];
       if (entry && entry[lang] !== undefined) {
         node.setAttribute("alt", entry[lang]);
+      }
+    });
+    var ariaNodes = document.querySelectorAll("[data-i18n-aria]");
+    ariaNodes.forEach(function (node) {
+      var key = node.getAttribute("data-i18n-aria");
+      var entry = translations[key];
+      if (entry && entry[lang] !== undefined) {
+        node.setAttribute("aria-label", entry[lang]);
       }
     });
     var toggle = document.getElementById("lang-toggle");
@@ -196,6 +207,38 @@
       contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
       });
+    }
+
+    // Back to top
+    var backToTop = document.getElementById("back-to-top");
+    if (backToTop) {
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 500) {
+          backToTop.classList.add("is-visible");
+        } else {
+          backToTop.classList.remove("is-visible");
+        }
+      });
+      backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    // Scroll-reveal animations
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var revealEls = document.querySelectorAll(".reveal");
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+      revealEls.forEach(function (el) { observer.observe(el); });
     }
   });
 })();
