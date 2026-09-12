@@ -666,6 +666,12 @@ body.nav-locked{ overflow:hidden; }
   .contact-grid{ grid-template-columns:280px 1fr; align-items:start; }
   .photo-grid-3{ grid-template-columns:repeat(3,1fr); }
 
+  .about-inner{ margin:0 auto; text-align:center; }
+
+  .faq-section .wrap > .eyebrow,
+  .faq-section .wrap > h2{ text-align:center; }
+  .faq-list{ margin:0 auto; }
+
   .hero{
     background-image:linear-gradient(rgba(20,24,29,0.62), rgba(20,24,29,0.62)), url('../assets/photos/finished-home-mediterranean.jpg');
     background-size:cover;
