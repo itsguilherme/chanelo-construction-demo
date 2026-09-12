@@ -667,6 +667,7 @@ body.nav-locked{ overflow:hidden; }
   .photo-grid-3{ grid-template-columns:repeat(3,1fr); }
 
   .about-inner{ margin:0 auto; text-align:center; }
+  .about-body{ margin-left:auto; margin-right:auto; }
 
   .faq-section .wrap > .eyebrow,
   .faq-section .wrap > h2{ text-align:center; }
